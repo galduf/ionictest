@@ -1,0 +1,78 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.9.1/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.9.1/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.9.1/css/ionic.bundle.css"/>
+	<link href="Ejer4.css" rel="stylesheet">
+  <script src="cordova.js"></script>
+  <script src="gallery.js"></script>
+  <title>Galeria!</title>
+</head>
+<body onload="onLoad()">
+  <ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Galeria!</ion-title>
+        <ion-buttons slot="primary">
+		<ion-button onclick="atras()"><ion-icon name="skip-backward"></ion-icon></ion-button>
+		<ion-button onclick="adelante()"><ion-icon name="skip-forward"></ion-icon></ion-button>
+		<ion-button onclick="play()"><ion-icon slot="icon-only" name="play"></ion-icon></ion-button>
+		<ion-button onclick="pause()"><ion-icon slot="icon-only" name="pause"></ion-icon></ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-toolbar>
+        <ion-item>
+          <ion-range min="0" max="5000" value="4000">
+            <ion-icon slot="start" size="small" name="speedometer"></ion-icon>
+            <ion-icon slot="end" name="speedometer"></ion-icon>
+          </ion-range>
+        </ion-item>
+      </ion-toolbar>    
+    </ion-header>
+    <ion-content>
+      <ion-tabs>
+        <ion-tab tab="valencia">
+          <ion-slides id="valencia">
+            <ion-slide><img src="img/parejo.jpg" /></ion-slide>
+            <ion-slide><img src="img/gaya.jpg" /></ion-slide>
+            <ion-slide><img src="img/rodrigo.jpg" /></ion-slide>
+          </ion-slides>
+        </ion-tab>
+        <ion-tab tab="madrid">
+          <ion-slides id="madrid">
+            <ion-slide><img src="img/bale.jpg" /></ion-slide>
+            <ion-slide><img src="img/benzema.jpg" /></ion-slide>
+            <ion-slide><img src="img/ramos.jpg" /></ion-slide>
+          </ion-slides>
+        </ion-tab>
+        <ion-tab tab="paris">
+          <ion-slides id="paris">
+            <ion-slide><img src="img/neymar.jpg" /></ion-slide>
+            <ion-slide><img src="img/mbappe.jpg" /></ion-slide>
+            <ion-slide><img src="img/cavani.jpg" /></ion-slide>
+          </ion-slides>
+        </ion-tab>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="valencia">
+            <ion-icon name="ios-football"></ion-icon>
+            <ion-label>Valencia CF</ion-label>
+          </ion-tab-button>
+          <ion-tab-button tab="madrid">
+            <ion-icon name="logo-usd"></ion-icon>
+            <ion-label>Real Madrid</ion-label>
+          </ion-tab-button>
+          <ion-tab-button tab="paris">
+            <ion-icon name="md-football"></ion-icon>
+            <ion-label>PSG</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-content>
+  </ion-app>
+</body>
+</html>

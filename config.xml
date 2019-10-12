@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.iesperemaria.gallery"
+    versionCode = "1"
+    version     = "0.0.1" >
+
+  <name>Ejercicio Galeria</name>
+
+  <description>
+     Una galería de prueba
+  </description>
+
+  <author href="https://iesperemaria.com" email="egalduf@iesperemaria.com">
+      Enrique Galduf Tel
+  </author>
+
+  <access origin="*" />
+  <plugin name="cordova-plugin-whitelist" />
+  <plugin name="cordova-plugin-vibration" />
+</widget>
